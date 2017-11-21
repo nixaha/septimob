@@ -35,7 +35,7 @@ $app-direction: ltr;
 
 $colors: (
   primary:    #488aff,
-  secondary:  #32db64,
+  secondary:  #007c23,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222
@@ -78,8 +78,11 @@ $colors: (
 // The premium icon font for Ionic. For more info, please see:
 // http://ionicframework.com/docs/ionicons/
 
+$ionicons-font-path: "../assets/fonts";
 @import "ionic.ionicons";
 
+$item-md-detail-push-show: true;
+$item-wp-detail-push-show: true;
 
 // Fonts
 // --------------------------------------------------

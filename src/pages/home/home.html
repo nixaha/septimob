@@ -1,17 +1,42 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="secondary">
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    <ion-list>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img class="uno" src="http://www.unipolidgo.edu.mx/sitio/wp-content/uploads/2017/08/IMG-20170814-WA0016-copia.jpg">
+          </ion-thumbnail>
+          <h2>CURSO DE CAPACITACIÓN CISCO CCNA A ITD Y UTD</h2>
+          <p>Desde el 2010, la Universidad Politécnica de Durango a través de la carrera de Ingeniería en Telemática,
+            se ha posicionado en temas tecnológicos ligados específicamente a las tecnologías de la información, basando 
+            el conocimiento y las competencias en los que marca y regula la curricula CCNA y CCNAP de CISCO, empresa líder
+            en el mundo que se dedica principalmente a la fabricación, venta, mantenimiento y consultoría de equipos de 
+            telecomunicaciones. Tal ha sido el éxito alcanzado por parte de docentes y alumnos de la UNIPOLI en este rubro 
+            que desde el año 2010 se consolidó como la primer Academia Regional en Durango y después de 5 años de operación, 
+            como Support Center y Training Center de CISCO, esto gracias a las certificaciones alcanzadas por docentes y 
+            alumnos que participan como instructores dentro de la academia.
+          </p>
+          <button ion-button clear [navPush]="homeg">Ver</button>
+        </ion-item>
+
+        <ion-item>
+            <ion-thumbnail item-start>
+              <img class="dos" src="http://www.unipolidgo.edu.mx/sitio/wp-content/uploads/2017/10/IMG_0470-copia-887x1024.jpg">
+            </ion-thumbnail>
+            <h2>ABANDERAMIENTO | FERIA DE LA CIENCIA UNIPOLI 2017</h2>
+            <p>La Universidad Politécnica de Durango, con profundo respeto, reconocimiento y honor, en medio de un evento 
+              cívico, entregó al fuego la bandera que cumplió su tiempo de vida en la institución y durante el cual brindó 
+              identidad y evocó siempre los valores de unidad y soberanía.
+              Dicho evento tuvo lugar en el marco del inicio de actividades del 6to Festival Internacional de Folclor Infantil 
+              “Rosaura Revueltas” impulsado por el Gobierno Estatal, y por el cual la Universidad, se permite realizar la “Feria 
+              de las Ciencias UNIPOLI 2017”, en presencia de todos los niños y niñas que participan en el Festival, procedentes 
+              de distintos estados del país como, Veracruz, Colima, Durango, Puebla, Guanajuato y países como Panamá y El Salvador.
+            </p>
+            <button ion-button clear [navPush]="homeg">Ver</button> 
+          </ion-item>
+      </ion-list>
 </ion-content>

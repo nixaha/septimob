@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-croquis',
@@ -7,7 +7,12 @@ import { NavController } from 'ionic-angular';
 })
 export class CroquisPage {
 
-  constructor(public navCtrl: NavController) {
+  sitio: any = {};
+
+  constructor(public navCtrl: NavController, private navParams: NavParams) {
+
+    console.log(navParams);
+    this.sitio = this.navParams.get('id');
 
   }
 

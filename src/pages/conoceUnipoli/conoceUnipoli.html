@@ -7,9 +7,33 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
+
+  <ion-list padding>
+      <button ion-item (tap)=irUduno() [navPush]="croquis" >
+          UD1
+        </button> 
+        <button ion-item >
+            UD2
+          </button>
+          <button ion-item >
+              UD3
+            </button>
+            <button ion-item >
+                Cafeterias
+              </button>
+              <button ion-item >
+                  Canchas
+                </button>
+                <button ion-item >
+                    Laboratorios
+                  </button> 
+                  <button ion-item >
+                      Centro de información
+                    </button>
+  </ion-list>
+    <!--<ion-card>
         <img src="http://www.unipolidgo.edu.mx/wp-content/themes/Layered/images/default-slides/slides/politecnica_1.jpg"/>
       </ion-card>
 
-      <button ion-button [navPush]="croquis" color="secondary" block>Croquis de la Unipoli</button>
+      <button ion-button [navPush]="croquis" color="secondary" block>Croquis de la Unipoli</button> -->
 </ion-content>

@@ -3,10 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-
 import { HorariosPage,
   HorariosIswPage,
-  HorariosgPage,
+  HorariosAmbPage,
+  HorariosCivPage,
+  HorariosIrtPage,
+  HorariosItmPage,
+  HorariosPyMesPage,
   GruposPage,
   ConoceUnipoliPage,
   CroquisPage,
@@ -22,6 +25,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
+
 const config = {
   apiKey: "AIzaSyBEqKtJCsyLJBQibxDIdqqwd_KijpnchNc",
   authDomain: "unipoliapp.firebaseapp.com",
@@ -35,7 +39,6 @@ const config = {
   declarations: [
     MyApp,
     HorariosPage,
-    HorariosgPage,
     GruposPage,
     ConoceUnipoliPage,
     CroquisPage,
@@ -43,6 +46,11 @@ const config = {
     HomegPage,
     InformacionEventosPage,
     HorariosIswPage,
+    HorariosAmbPage,
+    HorariosCivPage,
+    HorariosIrtPage,
+    HorariosItmPage,
+    HorariosPyMesPage,
     TabsPage
   ],
   imports: [
@@ -55,7 +63,6 @@ const config = {
   entryComponents: [
     MyApp,
     HorariosPage,
-    HorariosgPage,
     HorariosIswPage,
     GruposPage,
     ConoceUnipoliPage,
@@ -64,6 +71,11 @@ const config = {
     HomegPage,
     InformacionEventosPage,
     HorariosIswPage,
+    HorariosAmbPage,
+    HorariosCivPage,
+    HorariosIrtPage,
+    HorariosItmPage,
+    HorariosPyMesPage,
     TabsPage
   ],
   providers: [

@@ -6,6 +6,15 @@
         </ion-navbar>
 </ion-header>
 <ion-content padding>
+  <ion-list inset *ngFor = "let sitio of sitios | async">
+      <ion-item>
+          <h3>{{sitio.titulo}}</h3>
+          <img src ="{{sitio.foto}}">
+      </ion-item>
+      
+  </ion-list>
+
+  <!--
     <ion-card>
         <img src="http://durango.notigram.com/wp-content/uploads/sites/2/2016/08/Universidad-Politecnica-de-Durango-640x400.jpg"/>
     </ion-card>
@@ -14,5 +23,5 @@
             <ion-item>1 UD1</ion-item>
             <ion-item>2 UD2</ion-item>
             <ion-item>3 cafeteria</ion-item>
-          </ion-list>
+          </ion-list>-->
 </ion-content>

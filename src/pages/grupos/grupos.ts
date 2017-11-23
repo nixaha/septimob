@@ -8,13 +8,13 @@ import { NavParams } from 'ionic-angular/navigation/nav-params';
 })
 export class GruposPage {
 
-  mutante:any = {};
+  horario:any = {};
 
   constructor( public navCtrl: NavController, private navParams:NavParams ) {
 
     console.log( navParams );
 
-    this.mutante = this.navParams.get('nombre');
+    this.horario = this.navParams.get('id');
   }
 
 }

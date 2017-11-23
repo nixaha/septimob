@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import{ HorariosgPage } from "../index.paginas"
+import{ HorariosIswPage } from "../index.paginas"
 
 @Component({
   selector: 'page-horarios',
@@ -8,7 +8,7 @@ import{ HorariosgPage } from "../index.paginas"
 })
 export class HorariosPage {
 
-  horariosg:any = HorariosgPage;
+  horarios_isw:any = HorariosIswPage;
 
   constructor(public navCtrl: NavController) {
 

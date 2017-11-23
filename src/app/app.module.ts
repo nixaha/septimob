@@ -3,18 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { HorariosPage } from '../pages/horarios/horarios';
-import { HorariosgPage } from '../pages/horariosg/horariosg';
-import { GruposPage } from '../pages/grupos/grupos';
-import { ConoceUnipoliPage } from '../pages/conoceUnipoli/conoceUnipoli';
-import { CroquisPage } from '../pages/croquis/croquis';
-import { HomePage } from '../pages/home/home';
-import { HomegPage } from '../pages/homeg/homeg'; 
-import { InformacionEventosPage } from '../pages/informacionEventos/informacionEventos';
-import { TabsPage } from '../pages/tabs/tabs';
+
+import { HorariosPage,
+  HorariosIswPage,
+  HorariosgPage,
+  GruposPage,
+  ConoceUnipoliPage,
+  CroquisPage,
+  HomePage,
+  HomegPage,
+  InformacionEventosPage,
+  TabsPage
+       } from '../pages/index.paginas';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
+const config = {
+  apiKey: "AIzaSyBEqKtJCsyLJBQibxDIdqqwd_KijpnchNc",
+  authDomain: "unipoliapp.firebaseapp.com",
+  databaseURL: "https://unipoliapp.firebaseio.com",
+  projectId: "unipoliapp",
+  storageBucket: "unipoliapp.appspot.com",
+  messagingSenderId: "886176525130"
+};
 
 @NgModule({
   declarations: [
@@ -27,23 +42,28 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     HomegPage,
     InformacionEventosPage,
+    HorariosIswPage,
     TabsPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(config),
+    AngularFirestoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HorariosPage,
     HorariosgPage,
+    HorariosIswPage,
     GruposPage,
     ConoceUnipoliPage,
     CroquisPage,
     HomePage,
     HomegPage,
     InformacionEventosPage,
+    HorariosIswPage,
     TabsPage
   ],
   providers: [

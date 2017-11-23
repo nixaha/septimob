@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the HorariosIswPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { Observable } from 'rxjs/Observable';
+import { Horario } from '../../commons/Horario';
+import{ GruposPage } from "../index.paginas"
 
 @IonicPage()
 @Component({
@@ -15,11 +12,36 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HorariosIswPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  horarios: Observable<Horario[]>;
+  photoDoc: AngularFirestoreDocument<Horario[]>;
+  photoCollectionRef: AngularFirestoreCollection<Horario[]>;
+  grupos:any = GruposPage;
+
+
+  constructor(public navCtrl: NavController, 
+    private database: AngularFirestore) {
+      
+
+      this.photoCollectionRef = this.database.collection<Horario[]>('software');
+      
+      this.horarios = this.photoCollectionRef.snapshotChanges().map(actions => {
+        return actions.map(action => {
+          const data = action.payload.doc.data() as Horario;
+          const id = action.payload.doc.id;
+          return { id, ...data };
+        });
+      });
+
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HorariosIswPage');
+  detalles(_horario: Horario){
+    this.navCtrl.push(GruposPage, {
+      id: _horario
+    })
   }
+
+
+  
 
 }

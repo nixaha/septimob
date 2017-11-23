@@ -15,4 +15,13 @@
 
 <ion-content padding>
 
+  
+    <ion-list *ngFor="let horario of horarios | async"> 
+        <button ion-item  (tap)= "detalles(horario)" >
+            {{horario.grado}}   
+          </button>
+        
+    </ion-list> 
+
+
 </ion-content>

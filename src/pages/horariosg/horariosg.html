@@ -5,15 +5,12 @@
   </ion-header>
   
   <ion-content padding>       
-    <ion-list inset>
-        <button ion-item  [navPush]= "grupos">1°</button>
-        <button ion-item [navPush]= "grupos">2°</button>
-        <button ion-item [navPush]= "grupos">3°</button>
-        <button ion-item [navPush]= "grupos">4°</button>
-        <button ion-item [navPush]= "grupos">5°</button>
-        <button ion-item [navPush]= "grupos">6°</button>
-        <button ion-item [navPush]= "grupos">7°</button>
-        <button ion-item [navPush]= "grupos">8°</button>
-        <button ion-item [navPush]= "gruposg">9°</button>
+    <h4>Grados</h4>
+
+    <ion-list>
+      <ion-item *ngFor="let mutante of mutantes"
+                (click)="irGrupos( mutante )">
+
+      </ion-item>
     </ion-list>
   </ion-content>

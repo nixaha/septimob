@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular/navigation/nav-params';
 
 @Component({
   selector: 'page-grupos',
@@ -7,8 +8,13 @@ import { NavController } from 'ionic-angular';
 })
 export class GruposPage {
 
-  constructor(public navCtrl: NavController) {
+  mutante:any = {};
 
+  constructor( public navCtrl: NavController, private navParams:NavParams ) {
+
+    console.log( navParams );
+
+    this.mutante = this.navParams.get('nombre');
   }
 
 }

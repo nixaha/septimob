@@ -5,14 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { Horario } from '../../commons/Horario';
 import { GruposPage} from '../index.paginas';
 
-/**
- * Generated class for the HorariosPyMesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-@IonicPage()
+@IonicPage() 
 @Component({
   selector: 'page-horarios-py-mes',
   templateUrl: 'horarios-py-mes.html',
@@ -23,7 +16,8 @@ export class HorariosPyMesPage {
   photoCollectionRef: AngularFirestoreCollection<Horario[]>;
   grupos:any = GruposPage;
 
-  constructor(public navCtrl: NavController, private database: AngularFirestore) {
+  constructor(public navCtrl: NavController, 
+    private database: AngularFirestore) {
 
     this.photoCollectionRef = this.database.collection<Horario[]>('pymes');
     

@@ -19,8 +19,7 @@ export class HorariosIswPage {
 
 
   constructor(public navCtrl: NavController, 
-    private database: AngularFirestore) {
-      
+    private database: AngularFirestore) {      
 
       this.photoCollectionRef = this.database.collection<Horario[]>('software');
       
@@ -31,7 +30,6 @@ export class HorariosIswPage {
           return { id, ...data };
         });
       });
-
 
   }
 

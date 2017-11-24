@@ -38,8 +38,4 @@ export class HorariosIswPage {
       id: _horario
     })
   }
-
-
-  
-
 }

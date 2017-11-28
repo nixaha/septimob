@@ -4,8 +4,9 @@ import{ Ud1Page,
 Ud2Page,
 Ud3Page,
 LaboratoriosPage,
+AreasDeportivasYCafeteriasPage,
 CentroInformacionPage } from "../index.paginas"
-import { CanchasPage } from '../canchas/canchas';
+
 
 @Component({
   selector: 'page-conoceUnipoli',
@@ -18,7 +19,7 @@ export class ConoceUnipoliPage {
   ud3:any = Ud3Page;
   centro_informacion:any = CentroInformacionPage;
   laboratorios:any = LaboratoriosPage;
-  canchas:any = CanchasPage;
+  areas:any = AreasDeportivasYCafeteriasPage;
  
 
   constructor(public navCtrl: NavController) {    

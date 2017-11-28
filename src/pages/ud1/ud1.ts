@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { Sitio} from '../../commons/Sitio';
-import { CroquisPage } from '../index.paginas';
+import { CroquisPage } from '../index.paginas'; 
 
 @Component({
   selector: 'page-ud1',

@@ -8,5 +8,11 @@
 
 
 <ion-content padding>
+    <ion-list *ngFor="let sitio of sitios | async"> 
+        <button ion-item  (tap)= "detalles(sitio)" >
+            {{sitio.titulo}}   
+          </button>
+        
+    </ion-list>
 
 </ion-content>

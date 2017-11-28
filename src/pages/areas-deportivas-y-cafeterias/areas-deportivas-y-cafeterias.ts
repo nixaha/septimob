@@ -5,11 +5,12 @@ import { Observable } from 'rxjs/Observable';
 import { Sitio} from '../../commons/Sitio';
 import { CroquisPage } from '../index.paginas'; 
 
+
 @Component({
-  selector: 'page-centro-informacion',
-  templateUrl: 'centro-informacion.html',
+  selector: 'page-areas-deportivas-y-cafeterias',
+  templateUrl: 'areas-deportivas-y-cafeterias.html',
 })
-export class CentroInformacionPage {
+export class AreasDeportivasYCafeteriasPage {
 
   croquis: any =  CroquisPage;
   sitios: Observable<Sitio[]>;
@@ -19,7 +20,7 @@ export class CentroInformacionPage {
   constructor(public navCtrl: NavController,
     private database: AngularFirestore) {
       
-            this.sitioCollectionRef = this.database.collection<Sitio[]>('centro_Info');
+            this.sitioCollectionRef = this.database.collection<Sitio[]>('areas_deportivas_y_cafeterias');
             
             this.sitios = this.sitioCollectionRef.snapshotChanges().map(actions => {
               return actions.map(action => {

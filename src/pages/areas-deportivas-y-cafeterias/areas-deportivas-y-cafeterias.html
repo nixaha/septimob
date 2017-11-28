@@ -1,12 +1,12 @@
 <ion-header>
-        
-    <ion-navbar color="secondary">
-    <ion-title>Centro de Informacion</ion-title>
-    </ion-navbar>
-        
+
+  <ion-navbar color="secondary">
+    <ion-title>Areas deportivas y Cafeterias</ion-title>
+  </ion-navbar>
+
 </ion-header>
-        
-        
+
+
 <ion-content padding>
     <ion-list *ngFor="let sitio of sitios | async"> 
         <button ion-item  (tap)= "detalles(sitio)" >
@@ -14,5 +14,5 @@
         </button>
                 
     </ion-list>
-        
-</ion-content> 
+
+</ion-content>

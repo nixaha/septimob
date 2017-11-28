@@ -7,7 +7,7 @@ import{ CroquisPage } from "../index.paginas"
 
 @Component({
   selector: 'page-conoceUnipoli',
-  templateUrl: 'conoceUnipoli.html'
+  templateUrl: 'conoceUnipoli.html',
 })
 export class ConoceUnipoliPage {
   croquis:any = CroquisPage;
@@ -16,10 +16,12 @@ export class ConoceUnipoliPage {
   sitios: Observable<Sitio[]>;
   sitioDoc: AngularFirestoreDocument<Sitio[]>;
   sitioCollectionRef: AngularFirestoreCollection<Sitio[]>;
+  
  
 
   constructor(public navCtrl: NavController,
     private database: AngularFirestore) {
+      
       this.sitioCollectionRef = this.database.collection<Sitio[]>('uduno');
       
       this.sitios = this.sitioCollectionRef.snapshotChanges().map(actions => {
@@ -28,13 +30,10 @@ export class ConoceUnipoliPage {
           const id = action.payload.doc.id;
           return { id, ...data };
         });
-      });
-      
+      }); 
+        
   }
-
-  irUduno(){  
-
-  }
+  
   detalles(_sitio: Sitio){
     this.navCtrl.push(CroquisPage, {
       id: _sitio

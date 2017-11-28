@@ -13,7 +13,6 @@ export class GruposPage {
   constructor( public navCtrl: NavController, private navParams:NavParams ) {
 
     console.log( navParams );
-
     this.horario = this.navParams.get('id');
   }
 

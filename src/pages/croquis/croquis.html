@@ -1,16 +1,15 @@
 <ion-header>
         <ion-navbar color="secondary">
           <ion-title>
-            Croquis
+            {{sitio.titulo}}
           </ion-title>
         </ion-navbar>
 </ion-header>
-<ion-content padding>
-  <ion-list inset *ngFor = "let sitio of sitios | async">
-      <ion-item>
-          <h3>{{sitio.titulo}}</h3>
-          <img src ="{{sitio.foto}}">
-      </ion-item>
+<ion-content >
+  <ion-list >
+      <ion-item >
+        <img src ="{{sitio.foto}}">
+      </ion-item>      
       
   </ion-list>
 

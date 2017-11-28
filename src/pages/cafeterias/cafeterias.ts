@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-cafeterias',
   templateUrl: 'cafeterias.html',
@@ -9,7 +8,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CafeteriasPage {
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
 
   }
 

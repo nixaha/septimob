@@ -16,6 +16,13 @@ import { HorariosPage,
   HomePage,
   HomegPage,
   InformacionEventosPage,
+  CafeteriasPage,
+  CanchasPage,
+  CentroInformacionPage,
+  LaboratoriosPage,
+  Ud1Page,
+  Ud2Page,
+  Ud3Page,
   TabsPage
        } from '../pages/index.paginas';
 
@@ -51,6 +58,13 @@ const config = {
     HorariosIrtPage,
     HorariosItmPage,
     HorariosPyMesPage,
+    CafeteriasPage,
+    CanchasPage,
+    CentroInformacionPage,
+    LaboratoriosPage,
+    Ud1Page,
+    Ud2Page,
+    Ud3Page,
     TabsPage
   ],
   imports: [
@@ -76,6 +90,13 @@ const config = {
     HorariosIrtPage,
     HorariosItmPage,
     HorariosPyMesPage,
+    CafeteriasPage,
+    CanchasPage,
+    CentroInformacionPage,
+    LaboratoriosPage,
+    Ud1Page,
+    Ud2Page,
+    Ud3Page,
     TabsPage
   ],
   providers: [

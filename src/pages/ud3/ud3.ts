@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
 
-@IonicPage()
 @Component({
   selector: 'page-ud3',
   templateUrl: 'ud3.html',

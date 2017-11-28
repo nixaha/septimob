@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-laboratorios',
@@ -7,7 +7,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class LaboratoriosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
   }
 
   ionViewDidLoad() {

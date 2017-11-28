@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-ud2',
@@ -7,7 +7,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class Ud2Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
   }
 
   ionViewDidLoad() {

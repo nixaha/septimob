@@ -9,9 +9,14 @@
 <ion-content>
 
   <ion-list padding >
-      <button ion-item (tap)="detalles()"> Test
-         
-        </button> 
+    <ion-list inset>
+      <button class="isw" ion-item [navPush]= "ud1">UD1</button>
+      <button class="pymes" ion-item [navPush]= "ud2">UD2</button>
+      <button class="amb" ion-item [navPush]= "ud3">UD3</button>
+      <button class="civ" ion-item [navPush]= "centro_informacion">Centro de información</button>
+      <button class="manu" ion-item [navPush]= "laboratorios">Laboratorios</button>
+      <button class="redes" ion-item [navPush]= "canchas">Areas deportivas y cafeterías</button>
+  </ion-list>
         
   </ion-list>
     <!--<ion-card>

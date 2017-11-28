@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class Ud3Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
   }
 
   ionViewDidLoad() {

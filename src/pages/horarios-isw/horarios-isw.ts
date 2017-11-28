@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController} from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { Horario } from '../../commons/Horario';
 import{ GruposPage } from "../index.paginas"
 
-@IonicPage()
 @Component({
   selector: 'page-horarios-isw',
   templateUrl: 'horarios-isw.html',

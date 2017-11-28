@@ -13,7 +13,7 @@ export class ConoceUnipoliPage {
   croquis:any = CroquisPage;
   
 
-  sitios: Observable<Sitio[]>;
+  sitios: Observable<Sitio[]>; 
   sitioDoc: AngularFirestoreDocument<Sitio[]>;
   sitioCollectionRef: AngularFirestoreCollection<Sitio[]>;
   

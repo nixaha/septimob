@@ -13,13 +13,15 @@ export class ConoceUnipoliPage {
   croquis:any = CroquisPage;
   
 
-  sitios: Observable<Sitio[]>;
+  sitios: Observable<Sitio[]>; 
   sitioDoc: AngularFirestoreDocument<Sitio[]>;
   sitioCollectionRef: AngularFirestoreCollection<Sitio[]>;
+  
  
 
   constructor(public navCtrl: NavController,
     private database: AngularFirestore) {
+
       this.sitioCollectionRef = this.database.collection<Sitio[]>('uduno');
       
       this.sitios = this.sitioCollectionRef.snapshotChanges().map(actions => {

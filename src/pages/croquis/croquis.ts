@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular/navigation/nav-params';
 
 @Component({
   selector: 'page-croquis',
@@ -16,4 +17,4 @@ export class CroquisPage {
 
   }
 
-}
+} 

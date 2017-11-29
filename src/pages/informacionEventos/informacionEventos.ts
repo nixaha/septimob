@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import{ HomegPage } from "../index.paginas"
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { Observable } from 'rxjs/Observable';
+import { Noticia } from '../../commons/Noticia';
+import{ InformacionPage } from "../index.paginas"
+import { Evento } from '../../commons/Evento';
+
 
 @Component({
   selector: 'page-informacionEventos',
@@ -8,9 +13,28 @@ import{ HomegPage } from "../index.paginas"
 })
 export class InformacionEventosPage {
 
-  homeg:any = HomegPage;
-  constructor(public navCtrl: NavController) {
+  eventos: Observable<Evento[]>;
+  eventDoc: AngularFirestoreDocument<Evento[]>;
+  eventCollectionRef: AngularFirestoreCollection<Evento[]>;
+  informacion:any = InformacionPage;
 
+  constructor(public navCtrl: NavController,
+    private database: AngularFirestore) {
+      this.eventCollectionRef = this.database.collection<Evento[]>('informacion_eventos');
+      
+      this.eventos = this.eventCollectionRef.snapshotChanges().map(actions => {
+        return actions.map(action => {
+          const data = action.payload.doc.data() as Noticia;
+          const id = action.payload.doc.id;
+          return { id, ...data };
+        });
+      });
+  }
+
+  detalles(_evento: Evento){
+    this.navCtrl.push(InformacionPage, {
+      id: _evento
+    })
   }
 
 }

@@ -19,3 +19,4 @@ export { LaboratoriosPage } from './laboratorios/laboratorios';
 export { Ud1Page } from './ud1/ud1';  
 export { Ud2Page } from './ud2/ud2'; 
 export { Ud3Page } from './ud3/ud3'; 
+export { EnlacesPage } from './enlaces/enlaces';

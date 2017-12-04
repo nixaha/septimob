@@ -23,6 +23,7 @@ import { HorariosPage,
   Ud1Page,
   Ud2Page,
   Ud3Page,
+  EnlacesPage,
   TabsPage
        } from '../pages/index.paginas';
 
@@ -65,6 +66,7 @@ const config = {
     Ud1Page,
     Ud2Page,
     Ud3Page,
+    EnlacesPage,
     TabsPage
   ],
   imports: [
@@ -97,6 +99,7 @@ const config = {
     Ud1Page,
     Ud2Page,
     Ud3Page,
+    EnlacesPage,
     TabsPage
   ],
   providers: [

@@ -10,7 +10,7 @@
 <ion-content padding>
 
     <ion-list *ngFor="let horario of horarios | async"> 
-        <button ion-item  (tap)= "detalles(horario)" >
+        <button class="civ" ion-item  (tap)= "detalles(horario)" >
             {{horario.grado}}   
           </button>
         

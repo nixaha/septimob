@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Seleccion</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding><ion-card>
+  
+    <ion-card-header class="bienvenido"> 
+      Bienvenido (a)
+    </ion-card-header>
+    <br>
+  
+    <ion-card-content>
+    
+      <ion-list radio-group>
+          <h2>
+              <b>
+              Selecciona si eres Estudiante o Docente.
+            </b>
+            </h2>
+          <br>
+        <ion-item>
+          <ion-label class="alumno">Alumno</ion-label>
+         <ion-radio  (ionSelect)="perfil('alu')"></ion-radio>
+         <!--  <ion-radio value="go"></ion-radio>-->
+        </ion-item>
+      
+        <ion-item>
+          <ion-label class="profe">Profesor</ion-label>
+          <ion-radio (ionSelect)="perfil('profe')"></ion-radio>
+        </ion-item>
+      
+      </ion-list>
+      
+
+    </ion-card-content>
+  
+  </ion-card>
+
+
+</ion-content>

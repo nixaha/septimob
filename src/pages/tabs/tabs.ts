@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-import { HorariosPage } from '../horarios/horarios';
-import { ConoceUnipoliPage } from '../conoceUnipoli/conoceUnipoli';
-import { HomePage } from '../home/home';
-import { InformacionEventosPage } from '../informacionEventos/informacionEventos';
+import { HorariosPage } from '../HorariosCarre/horarios/horarios';
+import { ConoceUnipoliPage } from '../CroquisUni/conoceUnipoli/conoceUnipoli';
+import { HomePage } from '../Noticias//home/home';
+import { InformacionEventosPage } from '../Eventos/informacionEventos/informacionEventos';
 import { EnlacesPage } from '../enlaces/enlaces';
 
 @Component({

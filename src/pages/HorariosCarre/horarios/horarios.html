@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Horarios
+    </ion-title>
+    <ion-buttons end [navPush]= "seleccionar">
+      <button ion-button icon-only><ion-icon name ="contact"></ion-icon></button></ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list no-lines inset>
+        <button class="isw" ion-item [navPush]= "horarios_isw">
+          <ion-icon name="code" item-start></ion-icon> 
+          Ing. Software</button>
+        <button class="pymes" ion-item [navPush]= "horarios_pymes">
+          <ion-icon name="trending-up"item-start></ion-icon> 
+          Lic. En Adm. De PyME's</button>
+        <button class="amb" ion-item [navPush]= "horarios_amb">
+          <ion-icon name="leaf" item-start></ion-icon> 
+          Ing. Ambiental</button>
+        <button class="civ" ion-item [navPush]= "horarios_civ">
+          <ion-icon name="build" item-start></ion-icon> 
+          Ing. Civil</button>
+        <button class="manu" ion-item [navPush]= "horarios_itm">
+          <ion-icon name="settings" item-start></ion-icon> 
+          Ing. Tec. De Manufactura</button>
+        <button class="redes" ion-item [navPush]= "horarios_irt">
+          <ion-icon name="git-network" item-start></ion-icon> 
+          Ing. Redes y Telecomunicacion</button>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar color="secondary">
+      <ion-title>
+        Información y Eventos
+      </ion-title>
+      <ion-buttons end [navPush]= "seleccionar">
+        <button ion-button icon-only><ion-icon name ="contact"></ion-icon></button></ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding> 
+      <ion-list *ngFor ="let evento of eventos | async">
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img class="uno" src="{{evento.foto}}">
+            </ion-thumbnail>
+            <h2>{{evento.titulo}}</h2>
+            <p>{{evento.descripcion}}
+            </p>
+            <button color="danger" ion-button clear [navPush]="homeg" (tap)="detalles(evento)">Ver</button>
+          </ion-item>
+        </ion-list>
+  </ion-content>

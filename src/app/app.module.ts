@@ -24,14 +24,23 @@ import { HorariosPage,
   Ud2Page,
   Ud3Page,
   EnlacesPage,
+  SeleccionarCarreraPage,
+  LoginPage,
+  AlumnoPage,
+  RegistroPage,
   TabsPage
        } from '../pages/index.paginas';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+//plugin
+import { OneSignal } from '@ionic-native/onesignal';
+
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule} from 'angularfire2/auth';
+import { PushnotificationProvider } from '../providers/pushnotification/pushnotification';
 
 
 const config = {
@@ -67,13 +76,18 @@ const config = {
     Ud2Page,
     Ud3Page,
     EnlacesPage,
+    SeleccionarCarreraPage,
+    LoginPage,
+    AlumnoPage,
+    RegistroPage,
     TabsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -100,12 +114,18 @@ const config = {
     Ud2Page,
     Ud3Page,
     EnlacesPage,
+    SeleccionarCarreraPage,
+    LoginPage,
+    AlumnoPage,
+    RegistroPage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    OneSignal,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    PushnotificationProvider
   ]
 })
 export class AppModule {}

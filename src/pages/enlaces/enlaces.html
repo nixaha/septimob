@@ -1,7 +1,8 @@
 <ion-header>
-
   <ion-navbar color="secondary">
     <ion-title>Enlace</ion-title>
+    <ion-buttons end [navPush]= "seleccionar">
+        <button ion-button icon-only><ion-icon name ="contact"></ion-icon></button></ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -9,8 +10,16 @@
 
 <ion-content padding>
     <button ion-button color="danger" block 
+    onClick="window.location = 'http://www.unipolidgo.edu.mx/moodle/login/index.php';">
+    Plataforma Educativa (Moodle)</button>
+
+    <button ion-button color="danger" block 
     onClick="window.location = 'http://192.241.222.183:8080/apex/f?p=149:LOGIN:24594822925562:::::';">
     Control Escolar</button>
+
+    <button ion-button color="danger" block 
+    onClick="window.location = 'http://192.241.222.183:8081/apex/f?p=158:LOGIN_DESKTOP:9123804098622:::::';">
+    Trámite Estancias y Estadías</button>
       
 
 

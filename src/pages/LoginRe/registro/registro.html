@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>REGISTRO</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-icon class="icono" name="contact"></ion-icon>
+    <ion-item class="label">
+        <ion-label floating>E-mail</ion-label>
+        <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+      <h4 class="correo">@unipolidgo.edu.mx</h4>
+    
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+      <button class="btnRe" ion-button block color="danger" (click)="register(user)" [navPush]= "logi">Registrarse</button>
+
+</ion-content>

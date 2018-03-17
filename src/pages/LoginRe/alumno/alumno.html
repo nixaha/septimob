@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Alumno</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+      <ion-card-content>
+      
+        <ion-list radio-group>
+          <h2>
+            <b>
+            Selecciona la carrera a la que perteneces
+          </b>
+          </h2>
+        <br>
+          <ion-item>
+            <ion-label>Ing. Software</ion-label>
+            <ion-radio value="go"></ion-radio>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Lic. En Adm. De PyME's</ion-label>
+            <ion-radio value="rust"></ion-radio>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Ing. Ambiental</ion-label>
+            <ion-radio value="rust"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Ing. Civil</ion-label>
+            <ion-radio value="python"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>Ing. Tec. De Manufactura</ion-label>
+              <ion-radio value="python"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>Ing. Redes y Telecomunicacion</ion-label>
+              <ion-radio value="python"></ion-radio>
+          </ion-item>
+
+        </ion-list>
+        <button class="btn" ion-button round color="danger" [navPush]= "home">aceptar</button>
+      </ion-card-content>
+    
+    </ion-card>
+
+</ion-content>

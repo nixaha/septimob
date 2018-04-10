@@ -2,10 +2,32 @@
   
     <ion-navbar color="secondary">
       <ion-title>Mensajes</ion-title>
+      <ion-buttons end [navPush]= "seleccionar">
+          <button ion-button icon-only><ion-icon name ="contact"></ion-icon></button></ion-buttons>
     </ion-navbar>
 
   </ion-header>
   
   <ion-content padding> 
-     
+      <ion-card>
+    <ion-card-content>
+        
+      <ion-list>
+        <ion-label class="label">Escribe el Mensaje</ion-label>
+
+        <ion-item>
+          <ion-input placeholder="Titulo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-textarea placeholder="mensaje"></ion-textarea>
+        </ion-item>
+
+       </ion-list>
+    
+         <button ion-button class="enviar" [navPush]="informacion" round>siguiente</button>
+
+    </ion-card-content>
+</ion-card>
+
   </ion-content>

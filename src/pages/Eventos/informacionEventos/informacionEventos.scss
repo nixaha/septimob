@@ -1,4 +1,20 @@
 page-informacionEventos {
-    
+    #textarea{
+        border-radius: 8px;
+       left: 10%;
+       background-color: rgba(0, 255, 255, 0);
+      
+    }
+    .enviar{
+        position: relative;
+    left: 55%;
+    background-color: orange;
+    }
+    .pymes{
+        color-interpolation-filters: red;
+    }
+    .label{
+        font-size: 18px;
     }
     
+}

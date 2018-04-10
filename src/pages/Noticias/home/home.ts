@@ -22,7 +22,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
     private database: AngularFirestore) {
-      this.notiCollectionRef = this.database.collection<Noticia[]>('noticias');
+      this.notiCollectionRef = this.database.collection<Noticia[]>('noticiasEventos');
       
       this.noticias = this.notiCollectionRef.snapshotChanges().map(actions => {
         return actions.map(action => {

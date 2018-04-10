@@ -51,12 +51,12 @@ import { PushnotificationProvider } from '../providers/pushnotification/pushnoti
 
 
 const config = {
-  apiKey: "AIzaSyBEqKtJCsyLJBQibxDIdqqwd_KijpnchNc",
-  authDomain: "unipoliapp.firebaseapp.com",
-  databaseURL: "https://unipoliapp.firebaseio.com",
-  projectId: "unipoliapp",
-  storageBucket: "unipoliapp.appspot.com",
-  messagingSenderId: "886176525130"
+  apiKey: "AIzaSyDfd55hT8n0csz0S9I462oQIsEVHN0oSgM",
+  authDomain: "appunipoli.firebaseapp.com",
+  databaseURL: "https://appunipoli.firebaseio.com",
+  projectId: "appunipoli",
+  storageBucket: "appunipoli.appspot.com",
+  messagingSenderId: "748525573115"
 };
 
 @NgModule({

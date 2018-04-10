@@ -24,3 +24,10 @@ export { SeleccionarCarreraPage } from './LoginRe/seleccionar-carrera/selecciona
 export { LoginPage } from './LoginRe/login/login';
 export { AlumnoPage } from './LoginRe/alumno/alumno';
 export { RegistroPage } from './LoginRe/registro/registro';
+export { OlvidarcontraPage } from './LoginRe/olvidarcontra/olvidarcontra';
+export {GrupoambPage} from './HorariosCarre/grupoamb/grupoamb';
+export {GrupocivPage} from './HorariosCarre/grupociv/grupociv';
+export {GrupoirtPage} from './HorariosCarre/grupoirt/grupoirt';
+export {GrupoiswPage} from './HorariosCarre/grupoisw/grupoisw';
+export {GrupoitmPage} from './HorariosCarre/grupoitm/grupoitm';
+export {GrupopymesPage} from './HorariosCarre/grupopymes/grupopymes';

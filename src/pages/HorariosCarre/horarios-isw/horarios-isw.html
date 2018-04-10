@@ -9,11 +9,16 @@
     
     <ion-content padding>
     
-        <ion-list *ngFor="let horario of horarios | async"> 
-            <button class="isw" ion-item  (tap)= "detalles(horario)" >
-                {{horario.grado}}  
-              </button>
-            
+        <ion-list no-lines inset>
+            <button class="isw" ion-item [navPush]= "grupoisw">1°</button>
+            <button class="isw" ion-item [navPush]= "grupoisw">2°</button>
+            <button class="isw" ion-item [navPush]= "grupoisw">3°</button>
+            <button class="isw" ion-item [navPush]= "grupoisw">4°</button>
+            <button class="isw" ion-item [navPush]= "grupoisw">5°</button>
+            <button class="isw" ion-item [navPush]= "grupoisw">6°</button>
+            <button class="isw" ion-item [navPush]= "grupoisw">7°</button>
+            <button class="isw" ion-item [navPush]= "grupoisw">8°</button>
+            <button class="isw" ion-item [navPush]= "grupoisw">9°</button>   
         </ion-list>
     
     </ion-content>

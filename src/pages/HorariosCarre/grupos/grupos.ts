@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular/navigation/nav-params';
 
+
 @Component({
-  selector: 'page-grupos',
+  selector: 'page-grupos', 
   templateUrl: 'grupos.html'
 })
 export class GruposPage {

@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
-import { Observable } from 'rxjs/Observable';
-import { Sitio} from '../../../commons/Sitio';
 import { CroquisPage } from '../../index.paginas'; 
 
 
@@ -13,28 +10,9 @@ import { CroquisPage } from '../../index.paginas';
 export class AreasDeportivasYCafeteriasPage {
 
   croquis: any =  CroquisPage;
-  sitios: Observable<Sitio[]>;
-  sitioDoc: AngularFirestoreDocument<Sitio[]>;
-  sitioCollectionRef: AngularFirestoreCollection<Sitio[]>;
 
-  constructor(public navCtrl: NavController,
-    private database: AngularFirestore) {
-      
-            this.sitioCollectionRef = this.database.collection<Sitio[]>('areas_deportivas_y_cafeterias');
-            
-            this.sitios = this.sitioCollectionRef.snapshotChanges().map(actions => {
-              return actions.map(action => {
-                const data = action.payload.doc.data() as Sitio;
-                const id = action.payload.doc.id;
-                return { id, ...data };
-              });
-            });
+
+  constructor(public navCtrl: NavController) {
+    
     }
-
-    detalles(_sitio: Sitio){
-      this.navCtrl.push(CroquisPage, {
-        id: _sitio
-      })
-    }
-
 }

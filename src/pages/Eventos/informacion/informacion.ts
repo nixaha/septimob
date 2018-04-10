@@ -8,11 +8,7 @@ import { NavParams } from 'ionic-angular/navigation/nav-params';
 })
 export class InformacionPage {
 
-  evento:any = {};
-  
     constructor(public navCtrl: NavController, private navParams: NavParams) {
-      console.log(navParams);
-      this.evento= this.navParams.get('id');
   
     }
 }

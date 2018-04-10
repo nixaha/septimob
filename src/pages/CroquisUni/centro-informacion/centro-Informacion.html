@@ -8,12 +8,43 @@
         
         
 <ion-content padding>
-    <ion-list *ngFor="let sitio of sitios | async"> 
-        <button class="centro" ion-item  (tap)= "detalles(sitio)" >
-                <ion-icon name="{{sitio.icon}}" item-start></ion-icon>
-            {{sitio.titulo}}   
-        </button>
+
+        <ion-list no-lines inset>
+                <button class="centro" ion-item [navPush]= "">
+                <ion-icon name="book" item-start></ion-icon> 
+                Dirreccion</button>
+
+                <button class="centro" ion-item [navPush]= "">
+                <ion-icon name="cube" item-start></ion-icon> 
+                Cubiculo 1</button>
+
+                <button class="centro" ion-item [navPush]= "">
+                <ion-icon name="cube" item-start></ion-icon> 
+                Cubiculo 2</button>
+
+                <button class="centro" ion-item [navPush]= "">
+                <ion-icon name="desktop" item-start></ion-icon> 
+                Sala de Computo</button>
+
+                <button class="centro" ion-item [navPush]= "">
+                <ion-icon name="book" item-start></ion-icon> 
+                Area de Consulta</button>
+
+                <button class="centro" ion-item [navPush]= "">
+                <ion-icon name="cube" item-start></ion-icon> 
+                Site de la Biblioteca</button>
+
+                <button class="centro" ion-item [navPush]= "">
+                <ion-icon name="videocam" item-start></ion-icon> 
+                Sala de Video y Audio</button>
                 
-    </ion-list>
+                <button class="centro" ion-item [navPush]= "">
+                <ion-icon name="volume-down" item-start></ion-icon> 
+                Sala de Lectura</button>
+
+                <button class="centro" ion-item [navPush]= "">
+                <ion-icon name="wifi" item-start></ion-icon> 
+                Sala de Internet</button>
+            </ion-list>
         
 </ion-content> 

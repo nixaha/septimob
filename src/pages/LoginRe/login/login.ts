@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { User } from "../../../shared/models/user";
 import { AngularFireAuth } from 'angularfire2/auth';
-import{ RegistroPage, HomePage
+import{ RegistroPage, InformacionEventosPage, OlvidarcontraPage
  } from "../../index.paginas"
 
 @Component({
@@ -12,6 +12,7 @@ import{ RegistroPage, HomePage
 export class LoginPage {
   user = {} as User;
   registro:any = RegistroPage;
+  olvidar:any = OlvidarcontraPage;
 
   constructor(private afAuth: AngularFireAuth,
     public navCtrl: NavController, public navParams: NavParams) {
@@ -22,7 +23,7 @@ export class LoginPage {
       const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)
       .then((user) => {
       if (user.emailVerified) {
-        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.setRoot(InformacionEventosPage);
       }  else{
       }
       });

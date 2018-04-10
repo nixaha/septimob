@@ -8,12 +8,19 @@
         
         
 <ion-content padding>
-    <ion-list *ngFor="let sitio of sitios | async"> 
-        <button class="lab" ion-item  (tap)= "detalles(sitio)" >
-            <ion-icon name="{{sitio.icon}}" item-start></ion-icon>
-            {{sitio.titulo}}   
-          </button>
-        
+    <ion-list no-lines inset>
+        <button class="lab" ion-item [navPush]= "">
+        <ion-icon name="flash" item-start></ion-icon> 
+        Laboratorio de Ambiental</button>
+
+        <button class="lab" ion-item [navPush]= "">
+        <ion-icon name="flash" item-start></ion-icon> 
+        Laboratorio de Manufactura</button>
+
+        <button class="lab" ion-item [navPush]= "">
+        <ion-icon name="flash" item-start></ion-icon> 
+        Laboratorio de Telematica</button>
+
     </ion-list>
         
 </ion-content>

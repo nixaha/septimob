@@ -1,39 +1,16 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
-import { Observable } from 'rxjs/Observable';
-import { Horario } from '../../../commons/Horario';
-import{ GruposPage } from "../../index.paginas"
+import { NavController } from 'ionic-angular';
+import { GrupoirtPage } from "../../index.paginas"
 
 @Component({
   selector: 'page-horarios-irt',
   templateUrl: 'horarios-irt.html',
 })
 export class HorariosIrtPage {
-  horarios: Observable<Horario[]>;
-  photoDoc: AngularFirestoreDocument<Horario[]>;
-  photoCollectionRef: AngularFirestoreCollection<Horario[]>;
-  grupos:any = GruposPage;
+  grupoirt:any = GrupoirtPage;
 
-  constructor(public navCtrl: NavController, 
-    private database: AngularFirestore) {
-      this.photoCollectionRef = this.database.collection<Horario[]>('redes');
-      
-      this.horarios = this.photoCollectionRef.snapshotChanges().map(actions => {
-        return actions.map(action => {
-          const data = action.payload.doc.data() as Horario;
-          const id = action.payload.doc.id;
-          return { id, ...data };
-        });
-      });
+  constructor(public navCtrl: NavController) {
 
-
-  }
-
-  detalles(_horario: Horario){
-    this.navCtrl.push(GruposPage, {
-      id: _horario
-    })
   }
   }
 

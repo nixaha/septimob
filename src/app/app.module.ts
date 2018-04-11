@@ -48,7 +48,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule} from 'angularfire2/auth';
 import { PushnotificationProvider } from '../providers/pushnotification/pushnotification';
-
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 const config = {
   apiKey: "AIzaSyDfd55hT8n0csz0S9I462oQIsEVHN0oSgM",
@@ -145,6 +145,7 @@ const config = {
     StatusBar,
     SplashScreen,
     OneSignal,
+    LocalNotifications,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PushnotificationProvider
   ]

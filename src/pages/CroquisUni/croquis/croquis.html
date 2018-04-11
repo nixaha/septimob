@@ -9,10 +9,14 @@
 </ion-header>
 <ion-content >
   <ion-list >
-      <ion-item >
-        <img src ="{{sitio.foto}}">
-      </ion-item>      
-      
+      <ion-card>
+        <img src="{{sitio.foto}}"/>
+        <ion-card-content>
+          <p ALIGN="justify">
+            {{sitio.descripcion}}
+          </p>
+        </ion-card-content>
+      </ion-card>
   </ion-list>
 
 </ion-content>

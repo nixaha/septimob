@@ -10,20 +10,11 @@
 
 
 <ion-content padding>
-        <ion-list no-lines inset>
-                <button class="area" ion-item [navPush]= "">
-                <ion-icon name="restaurant" item-start></ion-icon> 
-                Cafeteria 1</button>
-                <button class="area" ion-item [navPush]= "">
-                <ion-icon name="restaurant" item-start></ion-icon> 
-                Cafeteria 2</button>
-                <button class="area" ion-item [navPush]= "">
-                <ion-icon name="basketball" item-start></ion-icon> 
-                Canchas de Basquetbol</button>
-                <button class="area" ion-item [navPush]= "">
-                <ion-icon name="football" item-start></ion-icon> 
-                Cancha de Futbol</button>
+    <ion-list *ngFor="let sitio of sitios | async"> 
+        <button class="area" ion-item  (tap)= "detalles(sitio)" >
+                <ion-icon name="{{sitio.icono}}"item-start></ion-icon>
+            {{sitio.titulo}}   
+        </button>
                 
-            </ion-list>
-
+    </ion-list>
 </ion-content>

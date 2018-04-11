@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {InformacionPage} from './../informacion/informacion';
+import {InformacionPage, SeleccionarCarreraPage} from '../../index.paginas';
 
 @Component({
   selector: 'page-informacionEventos',
@@ -8,6 +8,7 @@ import {InformacionPage} from './../informacion/informacion';
 })
 export class InformacionEventosPage {
   informacion:any = InformacionPage;
+  seleccionar: any = SeleccionarCarreraPage;
     
   constructor(public navCtrl: NavController) {
   }

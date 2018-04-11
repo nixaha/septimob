@@ -7,7 +7,7 @@ import{ HorariosIswPage,
   HorariosAmbPage,
   HorariosCivPage,
   SeleccionarCarreraPage
- } from "../../index.paginas"
+ } from "../../index.paginas" 
 
 
 @Component({

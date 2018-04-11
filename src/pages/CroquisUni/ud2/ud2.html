@@ -10,37 +10,11 @@
 
 
 <ion-content padding>
-    <ion-list no-lines inset>
-        <button class="ud2" ion-item [navPush]= "">
-        <ion-icon name="easel" item-start></ion-icon> 
-        Centro de Negocios Software</button>
-
-        <button class="ud2" ion-item [navPush]= "">
-        <ion-icon name="easel" item-start></ion-icon> 
-        Centro de Negocios PyME's</button>
-
-        <button class="ud2" ion-item [navPush]= "">
-        <ion-icon name="code" item-start></ion-icon> 
-        Direccion Academica de Software </button> 
-
-        <button class="ud2" ion-item [navPush]= "">
-        <ion-icon name="trending-up" item-start></ion-icon> 
-        Direccion Academica de PyME's</button>
-
-        <button class="ud2" ion-item [navPush]= "">
-        <ion-icon name="headset" item-start></ion-icon> 
-        Laboratorio de Idiomas</button>
-
-        <button class="ud2" ion-item [navPush]= "">
-        <ion-icon name="desktop" item-start></ion-icon> 
-        Laboratorio de Software</button>
-
-        <button class="ud2" ion-item [navPush]= "">
-        <ion-icon name="desktop" item-start></ion-icon> 
-        Laboratorio de Mac</button>
-
-        <button class="ud2" ion-item [navPush]= "">
-        <ion-icon name="desktop" item-start></ion-icon> 
-        Laboratorio de PyME's</button>                   
+    <ion-list *ngFor="let sitio of sitios | async"> 
+        <button class="ud2" ion-item  (tap)= "detalles(sitio)" >
+            <ion-icon name="{{sitio.icono}}" item-start></ion-icon>
+            {{sitio.titulo}}   
+          </button>
+        
     </ion-list>
 </ion-content>

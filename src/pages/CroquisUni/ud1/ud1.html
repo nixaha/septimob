@@ -10,46 +10,12 @@
 
 
 <ion-content padding>
-    <ion-list no-lines inset>
-        <button class="ud1" ion-item [navPush]= "">
-        <ion-icon name="microphone" item-start></ion-icon> 
-        Auditorio</button>
-
-        <button class="ud1" ion-item [navPush]= "">
-        <ion-icon name="document" item-start></ion-icon> 
-        Control Escolar</button>
-
-        <button class="ud1" ion-item [navPush]= "">
-        <ion-icon name="headset" item-start></ion-icon> 
-        Laboratorio de Idiomas</button> 
-
-        <button class="ud1" ion-item [navPush]= "">
-        <ion-icon name="print" item-start></ion-icon> 
-        Papeleria</button>
-
-        <button class="ud1" ion-item [navPush]= "">
-        <ion-icon name="briefcase" item-start></ion-icon> 
-        Rectoria</button>
-
-        <button class="ud1" ion-item [navPush]= "">
-        <ion-icon name="code-working" item-start></ion-icon> 
-        Site</button>
-
-        <button class="ud1" ion-item [navPush]= "">
-        <ion-icon name="people" item-start></ion-icon> 
-        Sociedad de Alumnos</button>
-
-        <button class="ud1" ion-item [navPush]= "">
-        <ion-icon name="code-working" item-start></ion-icon> 
-        Tic's</button>
-
-        <button class="ud1" ion-item [navPush]= "">
-        <ion-icon name="document" item-start></ion-icon> 
-        Trabajo social</button>
-
-        <button class="ud1" ion-item [navPush]= "">
-        <ion-icon name="document" item-start></ion-icon> 
-        Vinculacion</button>                    
+    <ion-list *ngFor="let sitio of sitios | async"> 
+        <button class="ud1" ion-item  (tap)= "detalles(sitio)" >
+            <ion-icon name="{{sitio.icono}}"item-start></ion-icon>
+            {{sitio.titulo}}   
+          </button>
+        
     </ion-list> 
 
 </ion-content>

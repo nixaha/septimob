@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { GrupopymesPage} from '../../index.paginas';
+import { GrupopymesPage, SeleccionarCarreraPage} from '../../index.paginas';
  
 @Component({
   selector: 'page-horarios-py-mes',
@@ -8,6 +8,7 @@ import { GrupopymesPage} from '../../index.paginas';
 })
 export class HorariosPyMesPage {
   grupospymes:any = GrupopymesPage;
+  seleccionar: any = SeleccionarCarreraPage;
 
   constructor(public navCtrl: NavController) {
   }

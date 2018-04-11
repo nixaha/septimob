@@ -10,10 +10,12 @@
 
 
 <ion-content padding>
-    <ion-list no-lines inset>
-        <button class="ud3" ion-item [navPush]= "">
-        <ion-icon name="construct" item-start></ion-icon> 
-        Ingenieria Civil</button>
+    <ion-list *ngFor="let sitio of sitios | async"> 
+        <button class="ud3" ion-item  (tap)= "detalles(sitio)" >
+            <ion-icon name="{{sitio.icono}}" item-start></ion-icon>
+            {{sitio.titulo}}   
+          </button>
+        
     </ion-list>
 
 </ion-content>

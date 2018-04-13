@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { Horario } from '../../../commons/Horario';
-import { GrupoambPage, GruposPage, SeleccionarCarreraPage } from "../../index.paginas"
+import { GrupoambPage, SeleccionarCarreraPage } from "../../index.paginas"
 
 @Component({ 
   selector: 'page-horarios-amb',
@@ -15,12 +15,11 @@ export class HorariosAmbPage {
   horarios: Observable<Horario[]>;
   photoDoc: AngularFirestoreDocument<Horario[]>;
   photoCollectionRef: AngularFirestoreCollection<Horario[]>;
-  grupos:any = GruposPage;
 
   constructor(public navCtrl: NavController, 
     private database: AngularFirestore) {
 
-      this.photoCollectionRef = this.database.collection<Horario[]>('ambiental/');
+      this.photoCollectionRef = this.database.collection('users').doc('ambiental').collection<Horario[]>('horarios');
       
       this.horarios = this.photoCollectionRef.snapshotChanges().map(actions => {
         return actions.map(action => {
@@ -34,7 +33,7 @@ export class HorariosAmbPage {
   }
 
   detalles(_horario: Horario){
-    this.navCtrl.push(GruposPage, {
+    this.navCtrl.push(GrupoambPage, {
       id: _horario
     })
   }

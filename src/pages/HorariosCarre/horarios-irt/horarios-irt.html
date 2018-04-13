@@ -11,17 +11,11 @@
 
 <ion-content padding>
 
-  <ion-list no-lines inset>
-    <button class="irt" ion-item [navPush]= "grupoirt">1°</button>
-    <button class="irt" ion-item [navPush]= "grupoirt">2°</button>
-    <button class="irt" ion-item [navPush]= "grupoirt">3°</button>
-    <button class="irt" ion-item [navPush]= "grupoirt">4°</button>
-    <button class="irt" ion-item [navPush]= "grupoirt">5°</button>
-    <button class="irt" ion-item [navPush]= "grupoirt">6°</button>
-    <button class="irt" ion-item [navPush]= "grupoirt">7°</button>
-    <button class="irt" ion-item [navPush]= "grupoirt">8°</button>
-    <button class="irt" ion-item [navPush]= "grupoirt">9°</button>   
-</ion-list> 
+  <ion-list *ngFor="let horario of horarios | async"> 
+    <button class="irt" ion-item  (tap)= "detalles(horario)" >
+        {{horario.grado}}   
+      </button>
+  </ion-list> 
  
 
 </ion-content>

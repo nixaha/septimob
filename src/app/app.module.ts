@@ -49,6 +49,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule} from 'angularfire2/auth';
 import { PushnotificationProvider } from '../providers/pushnotification/pushnotification';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 const config = {
   apiKey: "AIzaSyDfd55hT8n0csz0S9I462oQIsEVHN0oSgM",
@@ -146,6 +147,7 @@ const config = {
     SplashScreen,
     OneSignal,
     LocalNotifications,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PushnotificationProvider
   ]

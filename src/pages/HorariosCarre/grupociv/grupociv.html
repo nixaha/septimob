@@ -10,11 +10,14 @@
 
 
 <ion-content padding>
-
-    <ion-list no-lines inset>
-        <button class="civ" ion-item [navPush]= "grupos">a</button>
-        <button class="civ" ion-item [navPush]= "grupos">b</button>
-        <button class="civ" ion-item [navPush]= "grupos">c</button>  
-    </ion-list>
+    <button *ngIf='horario.grupo_a != null' class="civ" ion-item  (tap)= "detalles(horario)" >
+        {{horario.grupo_a}}   
+      </button>
+      <button *ngIf='horario.grupo_b != null' class="civ" ion-item  (tap)= "detalles(horario)" >
+        {{horario.grupo_b}}   
+      </button>
+      <button *ngIf='horario.grupo_c != null' class="civ" ion-item  (tap)= "detalles(horario)" >
+        {{horario.grupo_c}}   
+      </button>
 
 </ion-content>

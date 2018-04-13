@@ -1,7 +1,9 @@
 export interface Horario{
-    foto_a: string,
-    foto_b: string,
-    foto_c: string,
+    a: string,
+    b: string,
+    c: string,
     grado: string,
-    grupo: string
+    grupo_a: string,
+    grupo_b: string,
+    grupo_c: string
 }

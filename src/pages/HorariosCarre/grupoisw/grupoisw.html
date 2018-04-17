@@ -12,13 +12,13 @@
 <ion-content padding>
   
     <ion-list> 
-        <button *ngIf='horario.grupo_a != null' class="isw" ion-item  (tap)= "detalles(horario)" >
+        <button *ngIf='horario.grupo_a != null' class="isw" ion-item  (tap)= "detalles(horario.grupo_a)" >
             {{horario.grupo_a}}   
           </button>
-          <button *ngIf='horario.grupo_b != null' class="isw" ion-item  (tap)= "detalles(horario)" >
+          <button *ngIf='horario.grupo_b != null' class="isw" ion-item  (tap)= "detalles(horario.grupo_b)" >
             {{horario.grupo_b}}   
           </button>
-          <button *ngIf='horario.grupo_c != null' class="isw" ion-item  (tap)= "detalles(horario)" >
+          <button *ngIf='horario.grupo_c != null' class="isw" ion-item  (tap)= "detalles(horario.grupo_c)" >
             {{horario.grupo_c}}   
           </button>
         

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { GruposPage, SeleccionarCarreraPage} from '../../index.paginas';
+import { Horario } from '../../../commons/Horario';
 
 @Component({
   selector: 'page-grupociv',
@@ -15,5 +16,10 @@ export class GrupocivPage {
 
     console.log( navParams );
     this.horario = this.navParams.get('id');
+  }
+  detalles(horario: Horario){
+    this.navCtrl.push(GruposPage, {
+      id: horario
+    })
   }
 }

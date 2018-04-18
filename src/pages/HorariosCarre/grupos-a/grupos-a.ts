@@ -7,7 +7,10 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class GruposAPage {
 
+  img:any = {};
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.img = this.navParams.get('img');
   }
 
   ionViewDidLoad() {

@@ -22,7 +22,7 @@ export class InformacionPage {
           console.log(date);
           this.localNotifications.schedule({
              text: 'Delayed ILocalNotification',
-             at: date,
+             //at: date,
              led: 'FF0000',
              sound: this.setSound(),
           });

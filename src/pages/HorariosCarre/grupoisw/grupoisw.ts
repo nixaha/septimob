@@ -17,9 +17,9 @@ export class GrupoiswPage {
     console.log( navParams );
     this.horario = this.navParams.get('id');
   }
-  detalles(horario: Horario){
-    this.navCtrl.push(GruposPage, {
-      id: horario
+  detalles(img){
+    this.navCtrl.push(GruposAPage, {
+      'img' : img
     })
   }
 }

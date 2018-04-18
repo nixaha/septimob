@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import{ GruposPage, SeleccionarCarreraPage } from "../../index.paginas";
+import{ GruposPage, SeleccionarCarreraPage, GruposAPage, GruposBPage, GruposCPage, GruposDPage } 
+from "../../index.paginas";
 import { Horario } from '../../../commons/Horario';
 
 @Component({

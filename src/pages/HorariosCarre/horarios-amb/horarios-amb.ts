@@ -14,15 +14,15 @@ import { GrupoambPage, SeleccionarCarreraPage } from "../../index.paginas"
 export class HorariosAmbPage {
   grupoamb:any = GrupoambPage;
   seleccionar: any = SeleccionarCarreraPage;
-  horarios: Observable<Prueba[]>;
-  photoDoc: AngularFirestoreDocument<Prueba[]>;
-  photoCollectionRef: AngularFirestoreCollection<Prueba[]>;
+  horarios: Observable<Horario[]>;
+  photoDoc: AngularFirestoreDocument<Horario[]>;
+  photoCollectionRef: AngularFirestoreCollection<Horario[]>;
 
   constructor(public navCtrl: NavController, 
     private database: AngularFirestore) {
 
-      this.photoDoc = this.database.collection('users').doc('ambiental')
-      .collection('horarios').doc('');
+      this.photoCollectionRef = this.database.collection('users').doc('ambiental')
+      .collection<Horario[]>('horarios');
 
      // this.photoCollectionRef.ref.orderBy('grado');
     
@@ -31,7 +31,7 @@ export class HorariosAmbPage {
       
       this.horarios = this.photoCollectionRef.snapshotChanges().map(actions => {
         return actions.map(action => {
-          const data = action.payload.doc.data() as Prueba;
+          const data = action.payload.doc.data() as Horario;
           
           const id = action.payload.doc.id;
           return { id, ...data };

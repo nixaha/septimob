@@ -9,13 +9,15 @@ import { SeleccionarCarreraPage} from '../../index.paginas';
 })
 export class GruposPage {
 
-  horario:any = {};
+  img:any = {};
   seleccionar: any = SeleccionarCarreraPage;
 
   constructor( public navCtrl: NavController, private navParams:NavParams ) {
+    this.img = this.navParams.get('img')
+  }
 
-    console.log( navParams );
-    this.horario = this.navParams.get('id');
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad GruposAPage');
   }
 
 }

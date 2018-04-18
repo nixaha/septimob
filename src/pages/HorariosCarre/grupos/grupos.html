@@ -1,53 +1,17 @@
 <ion-header>
     <ion-navbar color="secondary">
-      <ion-title>Grupos</ion-title>
+      <ion-title>Grupo</ion-title>
       <ion-buttons end [navPush]= "seleccionar">
         <button ion-button icon-only><ion-icon name ="contact"></ion-icon></button></ion-buttons>
     </ion-navbar>
   </ion-header>
 
   <ion-content padding>        
-    <ion-card *ngIf='!!horario' inset>        
-        <img  src="{{horario}}"/>        
-        <button ion-button clear icon-left >
-            <ion-icon name="expand" ></ion-icon>
-          <a href="{{horario.a}}"> VER</a>          
-        </button> 
-      </ion-card>
-    
-      <ion-card *ngIf='!!horario.b'>
-        <br>
-        <img src="{{horario.b}}"/>
-        <button ion-button clear icon-left >
-            <ion-icon name="expand" ></ion-icon>
-          <a href="{{horario.b}}"> VER</a>          
-        </button> 
-      </ion-card>
-    
-      <ion-card *ngIf='!!horario.c'>
-        <br> 
-        <img src="{{horario.c}}"/>
-        <button ion-button clear icon-left >
-            <ion-icon name="expand" ></ion-icon>
-          <a href="{{horario.c}}"> VER</a>          
-        </button> 
-      </ion-card>
-
-      <ion-card *ngIf='!!horario.d'>
-          <br>    
-          <img src="{{horario.d}}"/>
-          <button ion-button clear icon-left >
-              <ion-icon name="expand" ></ion-icon>
-            <a href="{{horario.d}}"> VER</a>          
-          </button> 
+      <ion-card insert>
+          <img src="{{img}}"/>
+          <button ion-button clear icon-left>
+            <ion-icon name="expand"></ion-icon>
+            <a href="{{img}}">VER</a>
+          </button>
         </ion-card>
-
-        <ion-card *ngIf='!!horario.e'>
-            <br>    
-            <img src="{{horario.e}}"/>
-            <button ion-button clear icon-left >
-                <ion-icon name="expand" ></ion-icon>
-              <a href="{{horario.e}}"> VER</a>          
-            </button> 
-          </ion-card>
   </ion-content>

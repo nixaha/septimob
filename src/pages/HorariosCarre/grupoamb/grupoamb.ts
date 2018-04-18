@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import{ GruposPage, SeleccionarCarreraPage, GruposAPage, GruposBPage, GruposCPage} from "../../index.paginas";
+import{ GruposPage, SeleccionarCarreraPage } from "../../index.paginas";
 import { Horario } from '../../../commons/Horario';
 
 @Component({
@@ -18,9 +18,9 @@ export class GrupoambPage {
     this.horario = this.navParams.get('id');
   }
 
-  detalles(horario: Horario){
+  detalles(img){
     this.navCtrl.push(GruposPage, {
-      id: horario
+      'img': img
     })
   }
 }

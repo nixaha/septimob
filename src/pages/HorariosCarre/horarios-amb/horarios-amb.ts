@@ -3,7 +3,6 @@ import { NavController } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { Horario } from '../../../commons/Horario';
-import { Prueba} from '../../../commons/Prueba';
 
 import { GrupoambPage, SeleccionarCarreraPage } from "../../index.paginas"
 

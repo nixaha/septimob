@@ -16,7 +16,7 @@
         <ion-label class="label">Escribe el Mensaje</ion-label>
 
         <ion-item>
-          <ion-input placeholder="Titulo"><b></b></ion-input>
+          <ion-input [(ngModel)]="title" type = "text" placeholder="Titulo" class="tit"></ion-input>
         </ion-item>
 
         <ion-item>
@@ -25,7 +25,7 @@
 
        </ion-list>
     
-         <button ion-button class="enviar" [navPush]="informacion" round>siguiente</button>
+         <button ion-button class="enviar"  (click) = "send()"  round>siguiente</button>
 
     </ion-card-content>
 </ion-card>

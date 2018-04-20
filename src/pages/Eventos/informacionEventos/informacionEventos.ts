@@ -9,8 +9,18 @@ import {InformacionPage, SeleccionarCarreraPage} from '../../index.paginas';
 export class InformacionEventosPage {
   informacion:any = InformacionPage;
   seleccionar: any = SeleccionarCarreraPage;
+
+  title: string = '';
+  desc: string = '';
     
   constructor(public navCtrl: NavController) {
+    
+    
+  }
+
+  send(){
+    console.log(this.title, this.desc);
+    this.navCtrl.push(InformacionPage, {'title':this.title,'desc':this.desc})
   }
 
 }

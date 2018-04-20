@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import{ SeleccionarCarreraPage } from "../../index.paginas"
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
@@ -14,14 +14,18 @@ export class InformacionPage {
   data = { title:'', description:''};
 
     constructor(public navCtrl: NavController, public alertCtrl: AlertController, 
-      private platform: Platform, private localNotifications: LocalNotifications) {
+      private platform: Platform, private localNotifications: LocalNotifications,
+    public navParams: NavParams) {
       }
       scheduleNotification() {
+
+        this.data.title = this.navParams.get('title');
+        this.data.description = this.navParams.get('desc');
           console.log(this.data);
           var date = new Date(this.data.title+" "+this.data.description);
           console.log(date);
           this.localNotifications.schedule({
-             text: 'Delayed ILocalNotification',
+             text: this.data.title,
              //at: date,
              led: 'FF0000',
              sound: this.setSound(),

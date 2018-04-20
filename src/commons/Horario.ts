@@ -2,6 +2,8 @@ export interface Horario{
     a: string,
     b: string,
     c: string,
+    d: string,
+    e: string,
     grado: string,
     grupo_a: string,
     grupo_b: string,

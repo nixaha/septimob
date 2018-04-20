@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import{ SeleccionarCarreraPage } from "../../index.paginas"
+import{ SeleccionarCarreraPage, HomePage } from "../../index.paginas"
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import { Platform } from 'ionic-angular/platform/platform';
@@ -22,6 +22,8 @@ export class InformacionPage {
         this.data.title = this.navParams.get('title');
         this.data.description = this.navParams.get('desc');
 
+        
+
           console.log(this.data);
           var date = new Date(this.data.title+" "+this.data.description);
           console.log(date);
@@ -33,9 +35,10 @@ export class InformacionPage {
           });
           let alert = this.alertCtrl.create({
             title: 'Enviado!',
-            subTitle: 'Configuración de notificación con éxito en '+date,
+            subTitle: 'Configuración de notificación con éxito',
             buttons: ['OK']
           });
+          this.navCtrl.push(HomePage, {'titulo':this.data.title, 'descripcion': this.data.description});
           alert.present();
           this.data = { title:'', description:'' };
         }

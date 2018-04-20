@@ -21,6 +21,7 @@ export class InformacionPage {
 
         this.data.title = this.navParams.get('title');
         this.data.description = this.navParams.get('desc');
+
           console.log(this.data);
           var date = new Date(this.data.title+" "+this.data.description);
           console.log(date);

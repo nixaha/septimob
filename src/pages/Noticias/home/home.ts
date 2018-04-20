@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { Noticia } from '../../../commons/Noticia';
 import{ HomegPage, SeleccionarCarreraPage } from "../../index.paginas"
 
-const RUTA:string = 'https://firebasestorage.googleapis.com/v0/b/appunipoli.appspot.com/o/logo%20unipoli.png?alt=media&token=1fb7118d-e501-46d9-8840-35d0c8fb614a';
+const RUTA:string = 'https://firebasestorage.googleapis.com/v0/b/appunipoli.appspot.com/o/mensaje.png?alt=media&token=c6dc46cc-6df4-455a-96e0-3aac2502778d';
 
 @Component({
   selector: 'page-home',

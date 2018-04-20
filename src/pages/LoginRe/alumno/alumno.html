@@ -11,7 +11,7 @@
     <ion-card>
       <ion-card-content>
       
-        <ion-list radio-group>
+        <ion-list radio-group  [(ngModel)]="carrera">
           <h2>
             <b>
             Selecciona la carrera a la que perteneces
@@ -20,37 +20,37 @@
         <br>
           <ion-item>
             <ion-label>Ing. Software</ion-label>
-            <ion-radio value="go"></ion-radio>
+            <ion-radio value="isw" ></ion-radio>
           </ion-item>
         
           <ion-item>
             <ion-label>Lic. En Adm. De PyME's</ion-label>
-            <ion-radio value="rust"></ion-radio>
+            <ion-radio value="pymes"></ion-radio>
           </ion-item>
         
           <ion-item>
             <ion-label>Ing. En Tec. Ambiental</ion-label>
-            <ion-radio value="rust"></ion-radio>
+            <ion-radio value="ita"></ion-radio>
           </ion-item>
 
           <ion-item>
             <ion-label>Ing. Civil</ion-label>
-            <ion-radio value="python"></ion-radio>
+            <ion-radio value="ic"></ion-radio>
           </ion-item>
 
           <ion-item>
               <ion-label>Ing. En Tec. De Manufactura</ion-label>
-              <ion-radio value="python"></ion-radio>
+              <ion-radio value="itm"></ion-radio>
           </ion-item>
 
           <ion-item>
               <ion-label>Ing. En Redes y Telecomunicacion</ion-label>
-              <ion-radio value="python"></ion-radio>
+              <ion-radio value="irt"></ion-radio>
           </ion-item>
 
         </ion-list>
         
-        <button class="btn" ion-button round color="danger" [navPush]= "home">aceptar</button>
+        <button class="btn" ion-button round color="danger" (click) = "hide(carrera)" >aceptar</button>
       </ion-card-content>
     
     </ion-card>

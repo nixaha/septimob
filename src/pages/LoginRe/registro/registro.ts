@@ -20,15 +20,22 @@ export class RegistroPage {
   }
   async login(user: User) {
     try {
-      
-      const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)
-      .then((user) => {
-      if (user.emailVerified) {
-        this.navCtrl.setRoot(HomePage);
-      }  else{
+      if (user.password == user.password2){
+        const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)
+        .then((user) => {
+        if (user.emailVerified) {
+          this.navCtrl.setRoot(HomePage);
+        }  else{
+        }
+        });
+        alert("Todo esta correcto");
+      return false;
+      } else {
+         alert("Las contraseñas deben de coincidir");
+      return true; 
       }
-      });
     }
+     
     catch (e) {
       console.error(e);
     }

@@ -14,11 +14,54 @@
         <ion-input type="text" [(ngModel)]="user.email"></ion-input>
       </ion-item>
       <h4 class="correo">@unipolidgo.edu.mx</h4>
-    
+  
       <ion-item>
         <ion-label floating>Contraseña</ion-label>
         <ion-input type="password" [(ngModel)]="user.password"></ion-input>
       </ion-item>
+      <ion-item>
+        <ion-label floating>Confirma tu contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="user.password2" ></ion-input>
+      </ion-item>
+    <br>
+    <br>
+      <ion-list radio-group  [(ngModel)]="carrera">
+        <h6>
+          <b>
+          Selecciona la carrera a la que perteneces
+        </b>
+        </h6>
+        <ion-item>
+          <ion-label>Ing. Software</ion-label>
+          <ion-radio value="isw" ></ion-radio>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Lic. En Adm. De PyME's</ion-label>
+          <ion-radio value="pymes"></ion-radio>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Ing. En Tec. Ambiental</ion-label>
+          <ion-radio value="ita"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Ing. Civil</ion-label>
+          <ion-radio value="ic"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Ing. En Tec. De Manufactura</ion-label>
+            <ion-radio value="itm"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Ing. En Redes y Telecomunicacion</ion-label>
+            <ion-radio value="irt"></ion-radio>
+        </ion-item>
+
+      </ion-list>
       <button class="btnRe" ion-button block color="danger" (click)="register(user)" [navPush]= "logi">Registrarse</button>
 
 </ion-content>

@@ -20,7 +20,6 @@ export class RegistroPage {
   }
   async login(user: User) {
     try {
-      if (user.password == user.password2){
         const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)
         .then((user) => {
         if (user.emailVerified) {
@@ -28,12 +27,6 @@ export class RegistroPage {
         }  else{
         }
         });
-        alert("Todo esta correcto");
-      return false;
-      } else {
-         alert("Las contraseñas deben de coincidir");
-      return true; 
-      }
     }
      
     catch (e) {
@@ -48,6 +41,7 @@ export class RegistroPage {
    // user.email = this.uni.concat(user.email, this.uni)
     console.log(user.email);
     try {
+      if (user.password == user.password2){
       const result = await this.afAuth.auth.createUserWithEmailAndPassword(
         user.email,
         user.password
@@ -57,6 +51,14 @@ export class RegistroPage {
       if (result) {
         this.navCtrl.setRoot(HomePage);
       }
+      } else {
+        let alert = this.alertCtrl.create({
+          title: 'Las contraseñas deben de coincidir',
+          buttons: ['OK']
+        }); 
+        alert.present();
+      }
+
     } catch (e) {
       console.error(e);
     }

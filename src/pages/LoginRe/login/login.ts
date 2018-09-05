@@ -4,6 +4,7 @@ import { User } from "../../../shared/models/user";
 import { AngularFireAuth } from 'angularfire2/auth';
 import{ RegistroPage, InformacionEventosPage, OlvidarcontraPage
  } from "../../index.paginas"
+ import { AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-login',
@@ -15,7 +16,7 @@ export class LoginPage {
   olvidar:any = OlvidarcontraPage;
 
   constructor(private afAuth: AngularFireAuth,
-    public navCtrl: NavController, public navParams: NavParams) {
+    public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
   async login(user: User) {
     try {
@@ -30,6 +31,11 @@ export class LoginPage {
     }
     catch (e) {
       console.error(e);
+      let alert = this.alertCtrl.create({
+        title: 'Registro o contraseña incorrecta',
+        buttons: ['OK']
+      }); 
+      alert.present();
     }
   }
  

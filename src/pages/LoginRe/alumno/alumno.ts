@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ShowWhen, ActionSheet } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import{ HomePage, InformacionEventosPage
 } from "../../index.paginas"
 
